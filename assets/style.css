@@ -85,12 +85,22 @@ footer {
   color: var(--light);
 }
 
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .column {
   float: left;
 }
 
 .column.side {
   width: 25%;
+}
+
+.column.main {
+  width: 50%
 }
 
 @media screen and (max-width: 768px) {
