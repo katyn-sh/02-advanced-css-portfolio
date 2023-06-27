@@ -55,9 +55,10 @@ nav a:hover {
 }
 
 main {
-  display: flex;
+  display: table-column;
+
   flex: 1 1 0;
-  max-width: 96%;
+  max-width: 1400px;
   margin: 2% auto;
 }
 
@@ -79,6 +80,7 @@ article ul {
 
 footer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   padding: 2%;
   background-color: var(--dark);
@@ -87,12 +89,13 @@ footer {
 
 .row::after {
   content: "";
-  display: table;
+  display: flex;
   clear: both;
 }
 
 .column {
   float: left;
+  padding: 10px;
 }
 
 .column.side {
@@ -100,15 +103,21 @@ footer {
 }
 
 .column.main {
-  width: 50%
+  width: 75%
+}
+
+hr.dashed {
+  border-top: 3px dashed #bbb
 }
 
 @media screen and (max-width: 768px) {
   header {
     flex-direction: column;
   }
-
-  main {
-    max-width: 1200px;
+  .column.side, .column.main {
+    width: 100%;
   }
+  /* body {
+    min-width: 992px;
+  } */
 }
