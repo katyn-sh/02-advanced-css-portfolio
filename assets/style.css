@@ -106,8 +106,20 @@ footer {
   width: 75%
 }
 
-hr.dashed {
-  border-top: 3px dashed #bbb
+.cardsmall {
+  border-style: solid;
+  border-width: 3px;
+  padding: 10px;
+  flex: 0 0 20%;
+  margin: 20px;
+}
+
+.cardbig {
+  border-style: solid;
+  border-width: 3px;
+  padding: 10px;
+  flex: 0 0 80%;
+  margin: 20px;
 }
 
 @media screen and (max-width: 768px) {
