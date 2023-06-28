@@ -6,4 +6,4 @@ Link to portfolio:
 https://katyn-sh.github.io/02-advanced-css-portfolio/
 
 Screenshot of the deployed portfolio.
-![portfolioScrot](/02-advanced-css-portfolio/assets/portfolio%20scrot.png)
+![portfolioScrot](/assets/portfolio%20scrot.png)
