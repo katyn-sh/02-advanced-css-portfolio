@@ -1,19 +1,18 @@
+/* Sets color variables for the header and the rest of the page */
 :root {
   --dark: #0d6e81;
   --light: #fff;
   --navlink-color: #b9c6ae;
 }
 
-/* * {
-  box-sizing: border-box;
-} */
-
+/* Sets display mode and direction for the body (entire page) */
 body {
   display: flex;
   flex-direction: column;
   line-height: 1.3;
 }
 
+/* Sets the profile picture to the left, and makes it a circle cutout */
 .profile {
   vertical-align: left;
   width: 150px;
@@ -21,6 +20,7 @@ body {
   border-radius: 50%;
 }
 
+/* Styling and orientation for the header */
 header {
   display: flex;
   justify-content: space-between;
@@ -30,27 +30,27 @@ header {
   color: var(--light);
 }
 
+/* Font size for h1 (profile name) */
 h1 {
   font-size: 200%;
 }
 
+/* Font size for h2 (card titles) */
 h2 {
-  margin: 2% 0;
-  font-size: 250%;
+  font-size: 20px;
+  margin: 0;
+  color: #333;
 }
 
-a[href*='.css']::after {
-  content: '📝';
-  display: inline-block;
-  margin-left: 3px;
-}
 
+/* Orients nav bar to be horizontal  */
 nav ul {
   display: flex;
   justify-content: space-between;
   min-width: 300px;
 }
 
+/* Sets styling for the nav bar elements */
 nav a {
   background-color: unset;
   color: var(--navlink-color);
@@ -58,18 +58,20 @@ nav a {
   text-decoration: none;
 }
 
+/* Sets styling for the nav bar hover */
 nav a:hover {
   color: var(--light);
 }
 
+/* Sets parameters for the main portion of the site, such as maximum width and display orientaiton */
 main {
   display: table-column;
-
   flex: 1 1 0;
   max-width: 1400px;
   margin: 2% auto;
 }
 
+/* Sets the parameters and design for the footer */
 footer {
   display: flex;
   flex-direction: column;
@@ -79,38 +81,34 @@ footer {
   color: var(--light);
 }
 
-.row::after {
-  content: "";
-  display: flex;
-  clear: both;
-}
-
+/* Orients the contents of the page into columns */
 .column {
   float: left;
   padding: 10px;
 }
 
+/* Limits width of the nav column to 25% */
 .column.side {
   width: 25%;
 }
 
+/* Limits the width of the main column to 75% */
 .column.main {
   width: 75%
 }
 
+/* Allows the first project to be bigger than the others, and allows for grid orientation of cards */
 .band {
   width: 90%;
   max-width: 1000px;
   margin: 0 auto;
-  
   display: grid;
-  
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   grid-gap: 20px;
-  
 }
 
+/* Design and oriention parameters for the cards */
 .card {
   min-height: 100%;
   background: white;
@@ -124,21 +122,23 @@ footer {
   transition: all .1s ease-in;
 }
 
+/* Hover animations for the cards */
 .card:hover {
   top: -2px;
   box-shadow: 0 4px 5px rgba(0,0,0,0.2);
 }
 
+/* Design for the article subtext for the cards */
 .card article {
   padding: 20px;
   display: flex;
-  
   flex: 1;
   justify-content: space-between;
   flex-direction: column;
   
 }
 
+/* Design parameters for the card thumbnails */
 .card .thumb {
   padding-bottom: 60%;
   background-size: cover;
@@ -150,12 +150,7 @@ footer {
   line-height: 1.4;
 }
 
-h2 {
-  font-size: 20px;
-  margin: 0;
-  color: #333;
-}
-
+/* Design parameters for the subtext on the cards */
 .card span {
   font-size: 12px;
   font-weight: bold;
@@ -165,27 +160,8 @@ h2 {
   margin: 2em 0 0 0;
 }
 
-/* @media screen and (max-width: 768px) {
-  header {
-    flex-direction: column;
-  }
-  .column.side, .column.main {
-    width: 100%;
-  }
-  .band {
-    grid-template-columns: 1fr 1fr;
-  }  
-  .item-1 {
-  grid-column: 1/ span 2;
-  }
-  .item-1 h1 {
-    font-size: 30px;
-  }
-} */
-
+/* Orientation paramters in desktop */
 @media only screen and (min-width: 500px) {
-
-
   .band {
     grid-template-columns: 1fr 1fr;
   }  
@@ -197,6 +173,7 @@ h2 {
   }
 }
 
+/* Orientation parameters for mobile */
 @media only screen and (max-width: 850px) {
   header {
     flex-direction: column;
